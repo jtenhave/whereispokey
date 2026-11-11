@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Where is Pokey?</title>
+  <meta name="description" content="Lost poster for Pokey, a cream unicorn stuffy last seen November 8th. Email whereispokey@gmail.com if you find him.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%84%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Lilita+One&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1c2b4a;
+      --paper: #fff8ee;
+      --gold: #f6c945;
+      --gold-deep: #e2a61a;
+      --cherry: #e23d3d;
+      --sky: #1a2c52;
+      --park: #2f9a62;
+      --rec: #3a78d4;
+      --store: #e07a2f;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Baloo 2", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(246, 201, 69, 0.22), transparent 22%),
+        radial-gradient(circle at 92% 8%, rgba(226, 61, 61, 0.16), transparent 18%),
+        radial-gradient(circle at 86% 88%, rgba(62, 198, 196, 0.16), transparent 24%),
+        radial-gradient(circle at 10% 86%, rgba(246, 201, 69, 0.12), transparent 20%),
+        linear-gradient(165deg, #243864 0%, #1a2c52 48%, #14233f 100%);
+    }
+
+    .doodles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .doodle {
+      position: absolute;
+      font-family: "Lilita One", "Trebuchet MS", sans-serif;
+      line-height: 1;
+      color: rgba(255, 244, 214, 0.28);
+      animation: floaty 7s ease-in-out infinite;
+    }
+
+    .doodle.gold { color: rgba(246, 201, 69, 0.55); }
+    .doodle.cherry { color: rgba(255, 150, 140, 0.4); }
+
+    .d1 { top: 4%; left: 4%; font-size: 5.5rem; --r: -14deg; }
+    .d2 { top: 8%; right: 6%; font-size: 3.2rem; --r: 12deg; animation-delay: -2s; }
+    .d3 { bottom: 8%; left: 6%; font-size: 3.6rem; --r: 8deg; animation-delay: -4s; }
+    .d4 { bottom: 6%; right: 5%; font-size: 6rem; --r: -8deg; animation-delay: -1s; }
+    .d5 { top: 42%; left: 2%; font-size: 2rem; --r: -20deg; animation-delay: -3s; }
+    .d6 { top: 48%; right: 3%; font-size: 2.4rem; --r: 16deg; animation-delay: -5s; }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+      50% { transform: translateY(-10px) rotate(var(--r, 0deg)); }
+    }
+
+    .poster {
+      position: relative;
+      z-index: 1;
+      width: min(680px, calc(100% - 4rem));
+      margin: 2.4rem auto 3rem;
+      padding: 1.35rem 1.2rem 1.5rem;
+      background:
+        linear-gradient(180deg, rgba(255, 248, 238, 0.2), transparent 90px),
+        var(--paper);
+      color: var(--ink);
+      border: 5px solid var(--ink);
+      border-radius: 28px 22px 30px 24px;
+      box-shadow:
+        0 0 0 5px #fff1cf,
+        0 0 0 10px var(--ink),
+        14px 18px 0 rgba(8, 14, 30, 0.38);
+    }
+
+    .tape {
+      position: absolute;
+      top: -14px;
+      width: 92px;
+      height: 26px;
+      background: rgba(246, 201, 69, 0.78);
+      border: 2px solid rgba(28, 43, 74, 0.25);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+    }
+
+    .tape-left { left: 18%; transform: rotate(-6deg); }
+    .tape-right { right: 16%; transform: rotate(5deg); }
+
+    .poster-head {
+      margin: 0.35rem 0 1rem;
+      padding: 0.85rem 0.7rem 1rem;
+      text-align: center;
+      background:
+        radial-gradient(circle, rgba(28, 43, 74, 0.13) 1.15px, transparent 1.25px) 0 0 / 11px 11px,
+        linear-gradient(180deg, #ffe7a0, #fff4cf);
+      border: 4px solid var(--ink);
+      border-radius: 18px;
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .kicker {
+      margin: 0;
+      font-family: "Patrick Hand", "Comic Sans MS", cursive;
+      font-size: 1.35rem;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 0.1rem 0 0.35rem;
+      font-family: "Lilita One", "Trebuchet MS", sans-serif;
+      font-size: clamp(3rem, 11vw, 4.8rem);
+      font-weight: 400;
+      line-height: 0.88;
+      letter-spacing: 0.01em;
+      text-shadow: 3px 3px 0 var(--gold);
+    }
+
+    .lede {
+      margin: 0 auto;
+      max-width: 28rem;
+      font-size: 1.12rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    figure { margin: 0; }
+
+    .hero {
+      position: relative;
+      margin: 0 0 0.95rem;
+    }
+
+    .hero img,
+    .gallery img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #f3ead8;
+      border: 4px solid var(--ink);
+      border-radius: 16px;
+    }
+
+    .stamp {
+      position: absolute;
+      top: 14px;
+      right: 12px;
+      padding: 0.15rem 0.55rem 0.2rem;
+      border: 4px solid var(--cherry);
+      border-radius: 8px;
+      color: var(--cherry);
+      background: rgba(255, 248, 238, 0.88);
+      font-family: "Lilita One", "Trebuchet MS", sans-serif;
+      font-size: 1.55rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transform: rotate(12deg);
+      box-shadow: 3px 3px 0 rgba(226, 61, 61, 0.25);
+    }
+
+    figcaption {
+      margin-top: 0.35rem;
+      text-align: center;
+      font-family: "Patrick Hand", "Comic Sans MS", cursive;
+      font-size: 1.25rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .gallery img {
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center;
+      background: #f4ecde;
+    }
+
+    .tracks {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.15rem 0.4rem 1rem;
+      color: var(--gold-deep);
+    }
+
+    .tracks svg { width: 28px; height: 22px; }
+
+    .facts { display: grid; gap: 0.8rem; }
+
+    .card {
+      border: 4px solid var(--ink);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .seen {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.7rem 1rem 0.75rem;
+      background: #fff4c8;
+    }
+
+    .seen h2 { white-space: nowrap; }
+
+    h2 {
+      margin: 0;
+      font-family: "Lilita One", "Trebuchet MS", sans-serif;
+      font-size: 1.45rem;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+    }
+
+    .date {
+      margin: 0;
+      font-family: "Lilita One", "Trebuchet MS", sans-serif;
+      font-size: clamp(1.7rem, 7vw, 2.6rem);
+      line-height: 1;
+      color: var(--cherry);
+      white-space: nowrap;
+    }
+
+    .places { padding: 0.85rem 0.9rem 1rem; }
+
+    .places h2 { margin-bottom: 0.55rem; }
+
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.45rem 0.7rem;
+      border-radius: 14px;
+      background: #fff8ee;
+      border: 3px solid var(--ink);
+      font-weight: 700;
+      font-size: 1.08rem;
+    }
+
+    .pin {
+      flex: 0 0 auto;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 3px solid var(--ink);
+      color: white;
+    }
+
+    .pin.park { background: var(--park); }
+    .pin.rec { background: var(--rec); }
+    .pin.store { background: var(--store); }
+
+    .pin svg { width: 18px; height: 18px; }
+
+    .place {
+      min-width: 0;
+      line-height: 1.15;
+    }
+
+    .plea {
+      margin: 1rem 0 0.15rem;
+      padding: 0.75rem 1rem 0.85rem;
+      text-align: center;
+      font-family: "Patrick Hand", "Comic Sans MS", cursive;
+      font-size: 1.55rem;
+      line-height: 1.2;
+      background: #fff;
+      border: 4px dashed var(--ink);
+      border-radius: 18px;
+    }
+
+    .plea a {
+      display: inline-block;
+      max-width: 100%;
+      margin-top: 0.15rem;
+      padding: 0.2rem 0.1rem;
+      color: var(--cherry);
+      font-family: "Baloo 2", "Trebuchet MS", sans-serif;
+      font-size: clamp(0.95rem, 4.4vw, 1.15rem);
+      font-weight: 800;
+      line-height: 1.2;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .plea a:hover,
+    .plea a:focus-visible {
+      color: var(--ink);
+    }
+
+    @media (max-width: 720px) {
+      .d1, .d2, .d3, .d4 { font-size: 2.2rem; }
+      .d5, .d6 { display: none; }
+
+      .poster {
+        width: calc(100% - 1.5rem);
+        margin: 1.15rem auto 1.6rem;
+        padding: 0.95rem 0.7rem 1.05rem;
+        border-width: 4px;
+        border-radius: 22px 18px 24px 20px;
+        box-shadow:
+          0 0 0 3px #fff1cf,
+          0 0 0 6px var(--ink),
+          5px 7px 0 rgba(8, 14, 30, 0.35);
+      }
+
+      .tape {
+        width: 68px;
+        height: 20px;
+        top: -11px;
+      }
+
+      .poster-head {
+        margin-bottom: 0.75rem;
+        padding: 0.7rem 0.55rem 0.8rem;
+        box-shadow: 3px 3px 0 var(--ink);
+      }
+
+      .kicker { font-size: 1.15rem; }
+
+      h1 {
+        font-size: clamp(2.35rem, 12vw, 3.5rem);
+        text-shadow: 2px 2px 0 var(--gold);
+      }
+
+      .lede { font-size: 1.02rem; }
+
+      .stamp {
+        top: 8px;
+        right: 8px;
+        padding: 0.08rem 0.4rem 0.12rem;
+        border-width: 3px;
+        font-size: 1.1rem;
+        letter-spacing: 0.08em;
+      }
+
+      figcaption { font-size: 1.15rem; }
+
+      h2 { font-size: 1.25rem; }
+
+      .places { padding: 0.75rem 0.7rem 0.85rem; }
+
+      li {
+        gap: 0.55rem;
+        padding: 0.45rem 0.55rem;
+        font-size: 1rem;
+      }
+
+      .plea {
+        padding: 0.7rem 0.75rem 0.75rem;
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+
+      .gallery img {
+        aspect-ratio: auto;
+        height: auto;
+        max-height: 70vh;
+        object-fit: contain;
+      }
+
+      .seen {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.05rem;
+        padding: 0.65rem 0.8rem 0.7rem;
+      }
+
+      .seen h2 { font-size: 1.15rem; }
+      .date { font-size: 1.75rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .doodle { animation: none; }
+    }
+
+    @media print {
+      body { background: white; }
+      .doodles { display: none; }
+      .poster {
+        width: auto;
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="doodles" aria-hidden="true">
+    <span class="doodle gold d1">?</span>
+    <span class="doodle d2">★</span>
+    <span class="doodle cherry d3">★</span>
+    <span class="doodle gold d4">?</span>
+    <span class="doodle d5">✦</span>
+    <span class="doodle d6">?</span>
+  </div>
+
+  <main class="poster">
+    <div class="tape tape-left" aria-hidden="true"></div>
+    <div class="tape tape-right" aria-hidden="true"></div>
+
+    <header class="poster-head">
+      <p class="kicker">✦ Have you seen this unicorn? ✦</p>
+      <h1>Where is Pokey?</h1>
+      <p class="lede">Cream fur, a gold horn, and gold hooves. He is very loved, and a little ragged.</p>
+    </header>
+
+    <figure class="hero">
+      <img src="images/pokey-sunlit.jpg" alt="Pokey, a cream unicorn plush with a gold horn and gold hooves, held up in full sunlight">
+      <span class="stamp">Missing</span>
+      <figcaption>In the sunlight</figcaption>
+    </figure>
+
+    <div class="gallery">
+      <figure>
+        <img src="images/pokey-matted.jpg" alt="Pokey from the front, with matted cream fur, a faded gold horn, and worn gold hooves">
+        <figcaption>From the front</figcaption>
+      </figure>
+      <figure>
+        <img src="images/pokey-car.jpeg" alt="Pokey looking well loved, with matted cream fur, a faded horn, and dull gold hooves">
+        <figcaption>Well loved</figcaption>
+      </figure>
+    </div>
+
+    <div class="tracks" aria-hidden="true">
+      <svg viewBox="0 0 28 22" fill="currentColor"><ellipse cx="9" cy="6" rx="4" ry="5" transform="rotate(-25 9 6)"/><ellipse cx="19" cy="6" rx="4" ry="5" transform="rotate(25 19 6)"/><ellipse cx="14" cy="15" rx="6" ry="5"/></svg>
+      <svg viewBox="0 0 28 22" fill="currentColor"><ellipse cx="9" cy="6" rx="4" ry="5" transform="rotate(-25 9 6)"/><ellipse cx="19" cy="6" rx="4" ry="5" transform="rotate(25 19 6)"/><ellipse cx="14" cy="15" rx="6" ry="5"/></svg>
+      <svg viewBox="0 0 28 22" fill="currentColor"><ellipse cx="9" cy="6" rx="4" ry="5" transform="rotate(-25 9 6)"/><ellipse cx="19" cy="6" rx="4" ry="5" transform="rotate(25 19 6)"/><ellipse cx="14" cy="15" rx="6" ry="5"/></svg>
+      <svg viewBox="0 0 28 22" fill="currentColor"><ellipse cx="9" cy="6" rx="4" ry="5" transform="rotate(-25 9 6)"/><ellipse cx="19" cy="6" rx="4" ry="5" transform="rotate(25 19 6)"/><ellipse cx="14" cy="15" rx="6" ry="5"/></svg>
+      <svg viewBox="0 0 28 22" fill="currentColor"><ellipse cx="9" cy="6" rx="4" ry="5" transform="rotate(-25 9 6)"/><ellipse cx="19" cy="6" rx="4" ry="5" transform="rotate(25 19 6)"/><ellipse cx="14" cy="15" rx="6" ry="5"/></svg>
+    </div>
+
+    <section class="facts" aria-label="Where to look">
+      <article class="card seen">
+        <h2>Last seen</h2>
+        <p class="date">Sunday, Nov. 8th</p>
+      </article>
+
+      <article class="card places">
+        <h2>Possible locations</h2>
+        <ol>
+          <li>
+            <span class="pin park" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/>
+                <circle cx="12" cy="10" r="2.2" fill="currentColor" stroke="none"/>
+              </svg>
+            </span>
+            <span class="place">Blair Park in Saanich</span>
+          </li>
+          <li>
+            <span class="pin rec" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 20V9l8-5 8 5v11"/>
+                <path d="M9 20v-6h6v6"/>
+              </svg>
+            </span>
+            <span class="place">Gordon Head Rec Center</span>
+          </li>
+          <li>
+            <span class="pin store" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 9h16l-1.2 11H5.2L4 9z"/>
+                <path d="M8 9V7a4 4 0 0 1 8 0v2"/>
+              </svg>
+            </span>
+            <span class="place">Thrifty Foods Hillside</span>
+          </li>
+        </ol>
+      </article>
+    </section>
+
+    <p class="plea">If you find him, Pokey would really like to go home.<br>
+      <a href="mailto:whereispokey@gmail.com">whereispokey@gmail.com</a>
+    </p>
+  </main>
+</body>
+</html>
