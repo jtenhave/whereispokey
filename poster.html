@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Where is Pokey? — Poster</title>
+  <meta name="description" content="Printable lost poster for Pokey. Scan the code or visit whereispokey.com.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%84%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Lilita+One&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1c2b4a;
+      --paper: #fff8ee;
+      --gold: #f6c945;
+      --cherry: #e23d3d;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Baloo 2", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(246, 201, 69, 0.22), transparent 22%),
+        radial-gradient(circle at 92% 8%, rgba(226, 61, 61, 0.16), transparent 18%),
+        radial-gradient(circle at 86% 88%, rgba(62, 198, 196, 0.16), transparent 24%),
+        radial-gradient(circle at 10% 86%, rgba(246, 201, 69, 0.12), transparent 20%),
+        linear-gradient(165deg, #243864 0%, #1a2c52 48%, #14233f 100%);
+    }
+
+    .doodles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .doodle {
+      position: absolute;
+      font-family: "Lilita One", "Trebuchet MS", sans-serif;
+      line-height: 1;
+      color: rgba(255, 244, 214, 0.28);
+      animation: floaty 7s ease-in-out infinite;
+    }
+
+    .doodle.gold { color: rgba(246, 201, 69, 0.55); }
+    .doodle.cherry { color: rgba(255, 150, 140, 0.4); }
+    .d1 { top: 4%; left: 4%; font-size: 5.5rem; --r: -14deg; }
+    .d2 { top: 8%; right: 6%; font-size: 3.2rem; --r: 12deg; animation-delay: -2s; }
+    .d3 { bottom: 8%; left: 6%; font-size: 3.6rem; --r: 8deg; animation-delay: -4s; }
+    .d4 { bottom: 6%; right: 5%; font-size: 6rem; --r: -8deg; animation-delay: -1s; }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+      50% { transform: translateY(-10px) rotate(var(--r, 0deg)); }
+    }
+
+    .poster {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      width: min(640px, calc(100% - 1.5rem), calc((100vh - 1.6rem) * 8.5 / 11));
+      aspect-ratio: 8.5 / 11;
+      margin: 0.8rem auto;
+      padding: 0.9rem 0.85rem 0.8rem;
+      background: var(--paper);
+      border: 5px solid var(--ink);
+      border-radius: 26px 20px 28px 22px;
+      box-shadow:
+        0 0 0 5px #fff1cf,
+        0 0 0 10px var(--ink),
+        14px 18px 0 rgba(8, 14, 30, 0.38);
+    }
+
+    .tape {
+      position: absolute;
+      top: -14px;
+      width: 92px;
+      height: 26px;
+      background: rgba(246, 201, 69, 0.78);
+      border: 2px solid rgba(28, 43, 74, 0.25);
+    }
+
+    .tape-left { left: 18%; transform: rotate(-6deg); }
+    .tape-right { right: 16%; transform: rotate(5deg); }
+
+    .poster-head {
+      flex: 0 0 auto;
+      margin: 0.2rem 0 0.7rem;
+      padding: 0.65rem 0.6rem 0.7rem;
+      text-align: center;
+      background:
+        radial-gradient(circle, rgba(28, 43, 74, 0.13) 1.15px, transparent 1.25px) 0 0 / 11px 11px,
+        linear-gradient(180deg, #ffe7a0, #fff4cf);
+      border: 4px solid var(--ink);
+      border-radius: 18px;
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .kicker {
+      margin: 0;
+      font-family: "Patrick Hand", "Comic Sans MS", cursive;
+      font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+    }
+
+    h1 {
+      margin: 0.05rem 0 0;
+      font-family: "Lilita One", "Trebuchet MS", sans-serif;
+      font-size: clamp(2.4rem, 6.4vw, 4.15rem);
+      font-weight: 400;
+      line-height: 0.88;
+      text-shadow: 3px 3px 0 var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      flex: 1 1 auto;
+      min-height: 0;
+      margin: 0 0 0.7rem;
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 48% 40%;
+      background: #f3ead8;
+      border: 4px solid var(--ink);
+      border-radius: 16px;
+    }
+
+    .stamp {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 0.12rem 0.5rem 0.16rem;
+      border: 4px solid var(--cherry);
+      border-radius: 8px;
+      color: var(--cherry);
+      background: rgba(255, 248, 238, 0.9);
+      font-family: "Lilita One", "Trebuchet MS", sans-serif;
+      font-size: clamp(1.15rem, 3vw, 1.7rem);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transform: rotate(-10deg);
+      box-shadow: 3px 3px 0 rgba(226, 61, 61, 0.25);
+    }
+
+    .find {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    .qr {
+      width: min(28%, 1.85in);
+      min-width: 112px;
+      background: #fff;
+      border: 4px solid var(--ink);
+      border-radius: 14px;
+      padding: 0.28rem;
+    }
+
+    .qr img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .site {
+      margin: 0;
+      font-family: "Lilita One", "Trebuchet MS", sans-serif;
+      font-size: clamp(1.35rem, 4vw, 2.05rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.01em;
+    }
+
+    .site a {
+      color: var(--ink);
+      text-decoration-thickness: 3px;
+      text-underline-offset: 3px;
+    }
+
+    .site a:hover,
+    .site a:focus-visible {
+      color: var(--cherry);
+    }
+
+    @media (max-width: 520px) {
+      .d1, .d4 { font-size: 2.4rem; }
+      .d2, .d3 { display: none; }
+      .poster {
+        width: calc(100% - 1rem);
+        height: calc(100svh - 1.2rem);
+        aspect-ratio: auto;
+        margin: 0.6rem auto;
+        padding: 0.75rem 0.6rem 0.7rem;
+        border-width: 4px;
+        box-shadow:
+          0 0 0 3px #fff1cf,
+          0 0 0 6px var(--ink),
+          5px 7px 0 rgba(8, 14, 30, 0.35);
+      }
+      .tape { width: 64px; height: 18px; top: -10px; }
+      .poster-head { box-shadow: 3px 3px 0 var(--ink); }
+      h1 { text-shadow: 2px 2px 0 var(--gold); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .doodle { animation: none; }
+    }
+
+    @page {
+      size: 8.5in 11in;
+      margin: 0;
+    }
+
+    @media print {
+      html, body {
+        position: relative;
+        width: 8.5in;
+        height: 10.95in;
+        max-height: 10.95in;
+        min-height: 0;
+        margin: 0;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 8% 12%, rgba(246, 201, 69, 0.28), transparent 22%),
+          radial-gradient(circle at 92% 8%, rgba(226, 61, 61, 0.22), transparent 18%),
+          radial-gradient(circle at 86% 88%, rgba(62, 198, 196, 0.22), transparent 24%),
+          radial-gradient(circle at 10% 86%, rgba(246, 201, 69, 0.16), transparent 20%),
+          linear-gradient(165deg, #243864 0%, #1a2c52 48%, #14233f 100%);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .doodles {
+        display: block;
+        position: absolute;
+        inset: 0;
+        width: 8.5in;
+        height: 10.95in;
+        overflow: visible;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .doodle { animation: none; }
+      .d1 { top: 0.1in; left: 0.12in; font-size: 0.9in; }
+      .d2 { top: 0.28in; right: 0.2in; font-size: 0.48in; }
+      .d3 { bottom: 0.42in; left: 0.16in; font-size: 0.5in; }
+      .d4 { bottom: 0.28in; right: 0.12in; font-size: 0.85in; }
+
+      .poster {
+        width: 7.15in;
+        height: 9.35in;
+        aspect-ratio: auto;
+        margin: 0.7in auto 0;
+        border-radius: 22px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .poster-head,
+      .stamp,
+      .tape,
+      .qr,
+      .doodle {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .site a { text-decoration: none; color: var(--ink); }
+    }
+  </style>
+</head>
+<body>
+  <div class="doodles" aria-hidden="true">
+    <span class="doodle gold d1">?</span>
+    <span class="doodle d2">★</span>
+    <span class="doodle cherry d3">★</span>
+    <span class="doodle gold d4">?</span>
+  </div>
+
+  <main class="poster">
+    <div class="tape tape-left" aria-hidden="true"></div>
+    <div class="tape tape-right" aria-hidden="true"></div>
+
+    <header class="poster-head">
+      <p class="kicker">✦ Have you seen this unicorn? ✦</p>
+      <h1>Where is Pokey?</h1>
+    </header>
+
+    <figure class="hero">
+      <img src="images/pokey-sunlit.jpg" alt="Pokey, a cream unicorn plush with a gold horn and gold hooves, held up in full sunlight">
+      <span class="stamp">Missing</span>
+    </figure>
+
+    <div class="find">
+      <div class="qr">
+        <img src="images/whereispokey-qr.svg" alt="QR code that opens whereispokey.com">
+      </div>
+      <p class="site"><a href="https://whereispokey.com">whereispokey.com</a></p>
+    </div>
+  </main>
+</body>
+</html>
